@@ -1,4 +1,4 @@
-In this problem, we will implement least squares linear regression to predict density of wine based on its acidity. 
+In this problem, we will implement least squares linear regression to predict density of wine based on its acidity.
     1. The error metric used is least squares.
     2. The files \linearX.csv"and \linearY.csv"contain the acidity of the wine (x(i)'s) and its density (y(i)'s) respectively, with one     
        training example per row. 
