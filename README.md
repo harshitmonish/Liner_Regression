@@ -3,7 +3,7 @@
 In this problem, we will implement least squares linear regression to predict density of wine based on its acidity.
 
     1. The error metric used is least squares.
-    2. The files \linearX.csv"and \linearY.csv"contain the acidity of the wine (x(i)'s) and its density (y(i)'s) respectively, with one     
+    2. The files "linearX.csv"and "linearY.csv"contain the acidity of the wine (x(i)'s) and its density (y(i)'s) respectively, with one     
        training example per row. 
     3. Will be implementing least squares linear regression to learn the relation-ship between x(i)'s and y(i)'s.
     4. Will implement batch gradient descent method for optimizing the error metric and will choose an appropriate learning rate.
