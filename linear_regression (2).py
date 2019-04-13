@@ -121,8 +121,8 @@ def plotErrorFn(arrayX,arrayY,theta0,theta1,J_theta):
 
 
 def main():
-  arrayX = readData('./Assignment_1_datasets/linearX.csv')
-  arrayY = readData('./Assignment_1_datasets/linearY.csv')
+  arrayX = readData('./linearX.csv')
+  arrayY = readData('./linearY.csv')
   normalize(arrayX)
   lrate = 0.001
   theta0, theta1, J_theta = gradientDescent(arrayX,arrayY,lrate)
