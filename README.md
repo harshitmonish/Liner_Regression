@@ -1,5 +1,5 @@
 # Project Title: 
-## Predict density of wine based on its acidity
+## Predict density of wine based on its acidity using Linear regression
 In this problem, we will implement least squares linear regression to predict density of wine based on its acidity.
 
 * The error metric used is least squares.
