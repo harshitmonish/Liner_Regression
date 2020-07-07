@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun  9 10:13:44 2020
+
+@author: harshitm
+"""
+
 #!/usr/bin/env python3
 
 from mpl_toolkits.mplot3d import Axes3D
@@ -100,8 +107,8 @@ def plotErrorFn(arrayX,arrayY,theta0,theta1,J_theta):
     i = i+1
 
   # Plot the surface.
-  surf = ax.plot_surface(A, B, J,cmap=cm.coolwarm)
-
+  surf = ax.plot_surface(A, B, J,cmap=cm.coolwarm, alpha=0.7)
+  ax.scatter(theta0,theta1,J_theta, color='black', marker = '<', zorder=2)
   # Customize the z axis.
   ax.set_zlim(0, 60)
   ax.zaxis.set_major_locator(LinearLocator(10))
@@ -111,15 +118,23 @@ def plotErrorFn(arrayX,arrayY,theta0,theta1,J_theta):
   ax.set_zlabel("Cost Fn (J_theta)")
   fig.colorbar(surf, shrink=0.5, aspect=5)
 
-  # plot individual values in the side plot
-  ax = fig.add_subplot(1,2,2,projection='3d')
-  ax.scatter(theta0,theta1,J_theta, color='red', marker = '<')
+
   ax.set_xlim(theta0f-1,theta0f+0.5)
   ax.set_ylim(theta1f-0.5,theta1f+0.5)
-  plt.savefig('liner_regression_surface_plost.jpg')
+  plt.savefig('liner_regression_surface_plot.jpg')
   plt.show()
 
-
+  #Plot the Contours
+  fig2, ax2 = plt.subplots(1,1, figsize=(12, 7))
+  cp = ax2.contourf(A, B, J)
+  ax2.scatter(theta0,theta1,J_theta, color='yellow', marker = '>', zorder=2)
+  fig2.colorbar(cp)
+  ax2.set_title("Contour Plot")
+  ax2.set_xlabel("theta0")
+  ax2.set_ylabel("theta1")
+  fig2.savefig('linear_regression_contour_plot.jpg')
+  plt.show()
+  
 def main():
   arrayX = readData('./linearX.csv')
   arrayY = readData('./linearY.csv')
