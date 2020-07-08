@@ -10,3 +10,7 @@ In this problem, we will implement least squares linear regression to predict de
 * Will draw a 3-dimensional mesh showing the error function on z-axis and the parameters in the x y plane.Displaying the error value 
     using the current set of parameters at each iteration of the gradient descent.
    
+# Author 
+ * [Harshit Monish](https://github.com/harshitmonish)
+ 
+## Course Project Under [Prof. Parag Singla](http://www.cse.iitd.ernet.in/~parags/)
